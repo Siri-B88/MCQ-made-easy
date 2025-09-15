@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation and Design Thinking Quiz (VTU Belgaum)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        .option {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            font-weight: bold;
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        .explanation {
+            font-style: italic;
+            color: #555;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Innovation and Design Thinking Quiz (VTU Belgaum)</h1>
+
+    <form id="quizForm">
+        <!-- Module 1 -->
+        <div class="question" id="q1">
+            <p>1. What is the first step in the Design Thinking process?</p>
+            <div class="option">
+                <input type="radio" name="q1" id="q1a1">
+                <label for="q1a1">Define</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" id="q1a2">
+                <label for="q1a2">Empathize</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" id="q1a3">
+                <label for="q1a3">Prototype</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" id="q1a4">
+                <label for="q1a4">Test</label>
+            </div>
+            <p class="answer" id="q1Answer"></p>
+            <p class="explanation" id="q1Explanation"></p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="question" id="q2">
+            <p>2. What is the purpose of Customer Journey Mapping in Design Thinking?</p>
+            <div class="option">
+                <input type="radio" name="q2" id="q2a1">
+                <label for="q2a1">To visualize user experiences and pain points.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" id="q2a2">
+                <label for="q2a2">To create a financial model.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" id="q2a3">
+                <label for="q2a3">To develop a prototype.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" id="q2a4">
+                <label for="q2a4">To finalize the product.</label>
+            </div>
+            <p class="answer" id="q2Answer"></p>
+            <p class="explanation" id="q2Explanation"></p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="question" id="q3">
+            <p>3. What is the importance of prototyping in Design Thinking?</p>
+            <div class="option">
+                <input type="radio" name="q3" id="q3a1">
+                <label for="q3a1">To validate ideas through user testing.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" id="q3a2">
+                <label for="q3a2">To directly launch a product.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" id="q3a3">
+                <label for="q3a3">To replace market research.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" id="q3a4">
+                <label for="q3a4">To eliminate further testing.</label>
+            </div>
+            <p class="answer" id="q3Answer"></p>
+            <p class="explanation" id="q3Explanation"></p>
+        </div>
+
+        <!-- Module 4 & 5 -->
+        <div class="question" id="q4">
+            <p>4. What is a key characteristic of a Lean Startup approach?</p>
+            <div class="option">
+                <input type="radio" name="q4" id="q4a1">
+                <label for="q4a1">Building a complete product before feedback.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" id="q4a2">
+                <label for="q4a2">Iterating based on user feedback.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" id="q4a3">
+                <label for="q4a3">Avoiding market validation.</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" id="q4a4">
+                <label for="q4a4">Ignoring customer pain points.</label>
+            </div>
+            <p class="answer" id="q4Answer"></p>
+            <p class="explanation" id="q4Explanation"></p>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+            <button type="button" onclick="checkAnswers()">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+
+            // Question 1
+            const q1Answer = document.getElementById('q1Answer');
+            const q1Explanation = document.getElementById('q1Explanation');
+            if (document.getElementById('q1a2').checked) {
+                score++;
+                q1Answer.textContent = "Correct!";
+                q1Explanation.textContent = "The first step in Design Thinking is 'Empathize' to understand user needs.";
+            } else {
+                q1Answer.textContent = "Incorrect!";
+                q1Explanation.textContent = "Correct answer: 'Empathize'.";
+            }
+
+            // Question 2
+            const q2Answer = document.getElementById('q2Answer');
+            const q2Explanation = document.getElementById('q2Explanation');
+            if (document.getElementById('q2a1').checked) {
+                score++;
+                q2Answer.textContent = "Correct!";
+                q2Explanation.textContent = "Customer Journey Mapping helps visualize user experiences and pain points.";
+            } else {
+                q2Answer.textContent = "Incorrect!";
+                q2Explanation.textContent = "Correct answer: 'To visualize user experiences and pain points.'";
+            }
+
+            // Question 3
+            const q3Answer = document.getElementById('q3Answer');
+            const q3Explanation = document.getElementById('q3Explanation');
+            if (document.getElementById('q3a1').checked) {
+                score++;
+                q3Answer.textContent = "Correct!";
+                q3Explanation.textContent = "Prototyping validates ideas through user testing.";
+            } else {
+                q3Answer.textContent = "Incorrect!";
+                q3Explanation.textContent = "Correct answer: 'To validate ideas through user testing.'";
+            }
+
+            // Question 4
+            const q4Answer = document.getElementById('q4Answer');
+            const q4Explanation = document.getElementById('q4Explanation');
+            if (document.getElementById('q4a2').checked) {
+                score++;
+                q4Answer.textContent = "Correct!";
+                q4Explanation.textContent = "A Lean Startup approach focuses on iterating based on user feedback.";
+            } else {
+                q4Answer.textContent = "Incorrect!";
+                q4Explanation.textContent = "Correct answer: 'Iterating based on user feedback.'";
+            }
+
+            // Display Final Score
+            alert(`Your score: ${score}/4`);
+        }
+    </script>
+
+</body>
+</html>
